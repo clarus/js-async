@@ -73,47 +73,52 @@ export function all<Effect, Commit, State, A>(
 }
 
 /* eslint-disable no-undef */
-export const all2: <Effect, Commit, State, A1, A2>(
+export function all2<Effect, Commit, State, A1, A2>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>
-) => Ship<Effect, Commit, State, [A1, A2]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2]> {
+  return allAny(ship1, ship2);
+}
 
-export const all3: <Effect, Commit, State, A1, A2, A3>(
+export function all3<Effect, Commit, State, A1, A2, A3>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>,
   ship3: Ship<Effect, Commit, State, A3>
-) => Ship<Effect, Commit, State, [A1, A2, A3]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2, A3]>{
+  return allAny(ship1, ship2, ship3);
+}
 
-export const all4: <Effect, Commit, State, A1, A2, A3, A4>(
+export function all4<Effect, Commit, State, A1, A2, A3, A4>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>,
   ship3: Ship<Effect, Commit, State, A3>,
   ship4: Ship<Effect, Commit, State, A4>
-) => Ship<Effect, Commit, State, [A1, A2, A3, A4]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2, A3, A4]>{
+  return allAny(ship1, ship2, ship3, ship4);
+}
 
-export const all5: <Effect, Commit, State, A1, A2, A3, A4, A5>(
+export function all5<Effect, Commit, State, A1, A2, A3, A4, A5>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>,
   ship3: Ship<Effect, Commit, State, A3>,
   ship4: Ship<Effect, Commit, State, A4>,
   ship4: Ship<Effect, Commit, State, A5>
-) => Ship<Effect, Commit, State, [A1, A2, A3, A4, A5]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2, A3, A4, A5]>{
+  return allAny(ship1, ship2, ship3, ship4, ship5);
+}
 
-export const all6: <Effect, Commit, State, A1, A2, A3, A4, A5, A6>(
+export function all6<Effect, Commit, State, A1, A2, A3, A4, A5, A6>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>,
   ship3: Ship<Effect, Commit, State, A3>,
   ship4: Ship<Effect, Commit, State, A4>,
   ship4: Ship<Effect, Commit, State, A5>,
   ship4: Ship<Effect, Commit, State, A6>
-) => Ship<Effect, Commit, State, [A1, A2, A3, A4, A5, A6]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2, A3, A4, A5, A6]>{
+  return allAny(ship1, ship2, ship3, ship4, ship5, ship6);
+}
 
-export const all7: <Effect, Commit, State, A1, A2, A3, A4, A5, A6, A7>(
+export function all7<Effect, Commit, State, A1, A2, A3, A4, A5, A6, A7>(
   ship1: Ship<Effect, Commit, State, A1>,
   ship2: Ship<Effect, Commit, State, A2>,
   ship3: Ship<Effect, Commit, State, A3>,
@@ -121,6 +126,7 @@ export const all7: <Effect, Commit, State, A1, A2, A3, A4, A5, A6, A7>(
   ship4: Ship<Effect, Commit, State, A5>,
   ship4: Ship<Effect, Commit, State, A6>,
   ship4: Ship<Effect, Commit, State, A7>
-) => Ship<Effect, Commit, State, [A1, A2, A3, A4, A5, A6, A7]> =
-  allAny;
+): Ship<Effect, Commit, State, [A1, A2, A3, A4, A5, A6, A7]>{
+  return allAny(ship1, ship2, ship3, ship4, ship5, ship6, ship7);
+}
 /* eslint-enable no-undef */

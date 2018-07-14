@@ -15,6 +15,7 @@ node_js:
 script:
   - npm run eslint
   - npm run flow
-  - npm run prepublish
-  - cd examples/composition && npm i && npm run build && ./node_modules/.bin/flow && cd ../..
-  - cd examples/simple && npm i && npm run build && ./node_modules/.bin/flow && cd ../..
+  - npm run build
+  - npm run test
+  - cd examples/composition && npm i && npm run flow && npm run build && npm run test && cd ../..
+  - cd examples/simple && npm i && npm run flow && npm run build && npm run test && cd ../..
